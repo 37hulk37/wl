@@ -2,9 +2,7 @@ import re
 
 keywords = {
     "api.vk.com",
-    "login.vk.com",
     "eh.vk.com",
-    "ya.ru",
     "ads.x5.ru",
 }
 
@@ -36,7 +34,7 @@ def __main__():
     filtered = filter(blocks)
 
     with open("vless_russians.txt", "w", encoding="utf-8") as f:
-        f.write("".join(filtered))
+        f.write("".join(filtered[:50]))
 
 
 if __name__ == "__main__":
